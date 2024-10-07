@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent {
+  FirstName="jemima";
+  LastName="Kathar";
+  name="Ashik";
+  getMax(first:number,second:number)
+  {
+    return Math.max(first,second);
+  }
+  color="blue";
+  title="jemi";
+  isdisabled=TransformStreamDefaultController;
 
+
+  clickcount=0;
+  clickcount1=1;
+  clickMe()
+  {
+    this.clickcount++;
+  }
 }
