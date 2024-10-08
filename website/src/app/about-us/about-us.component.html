@@ -1,1 +1,45 @@
-<p>about-us works!</p>
+<ul>
+   <h1>{{title}}</h1> 
+    <li *ngFor="let movie of movies">
+    {{movie}}
+    </li>
+</ul>
+<ul>
+    <h1>{{title}}</h1> 
+     <li *ngFor="let flims of flim">
+     {{flims.title}}-{{flims.decorator}}
+     </li>
+ </ul>
+
+ <div class="panel panel-primary">
+    <div class="panel-heading">
+       <h1>{{heading}}</h1>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+       
+            <table class="table-striped">
+                <thead>
+                 <tr>
+                    <th>S.no</th>
+                    <th>Batsmen</th>
+                    <th>Score</th>
+                    <th>Review</th>
+                 </tr>
+                </thead>
+                <tbody>
+                    <tr
+                    [ngClass]='{"bg-success":od}'
+                           *ngFor="let scores of score;let i=index;let od=odd;let e=even;">
+                        <td>{{i+1}}</td>
+                        <td>{{scores.batsman}}</td>
+                        <td>{{scores.score}}</td>
+                        <td>{{scores.review}}</td>
+                    </tr>        
+                </tbody>
+            </table>
+            </div>
+     
+    </div>
+
+ </div>

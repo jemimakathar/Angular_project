@@ -32,4 +32,10 @@ export class IndexComponent {
   {
     this.value=(event.target as HTMLInputElement).value
   }
+
+
+  alertNotification()
+  {
+    alert("hai");
+  }
 }

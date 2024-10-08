@@ -45,11 +45,16 @@
 
 
     <!--Event binding fot data-->
-    <input type="text"(input)="handleInput($event)">
+    <input type="text"(input)="handleInput($event)"> <!--event is an object uesd to identify which element goes to perform the event operation-->
     <p>{{value}}</p>
     <!--without handle input-->
     <input type="text"(input)="handleInput($event);value1=$any($event.target).value">
     <p>{{value1}}</p>
+    <button (click)="alertNotification()">alert</button>
+
+
+
+
     
 
 </body>
