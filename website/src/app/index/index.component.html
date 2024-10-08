@@ -17,12 +17,13 @@
     <h1>{{FirstName}}{{LastName}}</h1>                           <!--String Interpolation-->
     <h1 [innerText]="FirstName"></h1>                            <!--property binding-->
     <!--Two way binding-->
-  
     <h1>{{name}}</h1>
     
     <br>
     <input type="text"[(ngModel)]="name">
-      <!--String interploation-->
+
+
+    <!--String interploation-->
     <h1>{{'hai'+" "+'jemi'+" "+'welcome'}}</h1>
     <p>100*80={{100*80}}</p>
     <p>Largest Number:{{getMax(1000,200)}}</p>
@@ -35,9 +36,20 @@
                       <!--or-->
     <button [attr.disabled]="isdisabled">Click mee...!</button>
     <p [innerText] = "'welcome'+'to'+'learn'"></p>
+
+
     <!--Event Binding-->
     <p> you have clicked {{clickcount}}</p>
     <p>copy of clicked {{clickcount1}}</p>
-    <button (click)="clickMe();clickcount1=clickcount">click mee..!</button>
+    <button (click)="clickMe();clickcount1=clickcount">click mee..!</button><br><br>
+
+
+    <!--Event binding fot data-->
+    <input type="text"(input)="handleInput($event)">
+    <p>{{value}}</p>
+    <!--without handle input-->
+    <input type="text"(input)="handleInput($event);value1=$any($event.target).value">
+    <p>{{value1}}</p>
+    
 
 </body>

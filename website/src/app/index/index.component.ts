@@ -24,4 +24,12 @@ export class IndexComponent {
   {
     this.clickcount++;
   }
+
+
+  value='';
+  value1='';
+  handleInput(event:any)
+  {
+    this.value=(event.target as HTMLInputElement).value
+  }
 }
