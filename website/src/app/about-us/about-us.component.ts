@@ -30,4 +30,19 @@ export class AboutUsComponent {
       {batsman:"jemi",score:"120",review:"good fielder"}
     ]
 
+
+    number='0';
+    showme=true;
+    value=false;
+
+
+    enableRed=false;
+    enableBig=false;
+    enableStyle=false;
+
+    status ="availabl";
+    color='pink';
+    background='black';
+
+
 }

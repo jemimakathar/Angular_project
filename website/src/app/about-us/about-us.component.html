@@ -1,3 +1,5 @@
+<!--ng For-->
+
 <ul>
    <h1>{{title}}</h1> 
     <li *ngFor="let movie of movies">
@@ -29,8 +31,7 @@
                 </thead>
                 <tbody>
                     <tr
-                    [ngClass]='{"bg-success":od}'
-                           *ngFor="let scores of score;let i=index;let od=odd;let e=even;">
+                    [ngClass]='{"bg-primary":od,"bg-success":f,"bg-warning":l}' *ngFor="let scores of score;let i=index;let od=odd;let e=even;let f=first;let l=last">                          
                         <td>{{i+1}}</td>
                         <td>{{scores.batsman}}</td>
                         <td>{{scores.score}}</td>
@@ -38,8 +39,79 @@
                     </tr>        
                 </tbody>
             </table>
-            </div>
-     
-    </div>
+            </div> 
 
+    </div>
+    
  </div>
+
+
+ <!-- ng switch-->
+
+ <label for="number">Enter the number</label>
+ <input type="text" [(ngModel)]="number">
+ <div [ngSwitch]="number">
+    <div *ngSwitchCase="1">One</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+ </div> 
+
+
+ <!-- ngIf -->
+
+ <h1>ngIf Example</h1>
+ <p *ngIf="false" >can you see mee???</p> 
+ <div class="row">
+    <label for="">
+    <input type="checkbox" [(ngModel)]="showme"></label>
+ </div>
+ <p>{{showme}}</p>
+ <p *ngIf="showme">show me is checked</p>
+ <p *ngIf="!showme">show me is unchecked</p>
+
+
+ <!--then and else-->
+ <div class="row">
+    <label for="">
+    <input type="checkbox" [(ngModel)]="value"></label>
+ </div>
+ <div *ngIf="value;then thenBlock;else elseBlock">
+ </div>
+ <ng-template #thenBlock>
+    <p *ngIf="value">show me is visible</p>
+ </ng-template> 
+ <ng-template #elseBlock>
+    <p *ngIf="!value">show me is Not visible</p>
+ </ng-template>
+
+
+ <!--Attribute Directive-->
+ <!--[ng class]-->
+
+ <div [ngClass]="['primary','big']">
+    <p>Heyy cutieee..!</p>
+ </div>
+ <div [ngClass]="{'primary':false}">
+    <p>heyy jemi..!</p>
+ </div>
+ Red<input type="checkbox" [(ngModel)]="enableRed">
+ Big<input type="checkbox" [(ngModel)]="enableBig">
+ Style<input type="checkbox" [(ngModel)]="enableStyle">
+ <div
+  [ngClass]="
+  {'primary':enableRed,
+  'big':enableBig,
+  'style':enableStyle
+  }">
+   Submit
+ </div>
+<!--ng style-->
+Color:<input type="text" [(ngModel)]="color">
+BackgroundColor:<input type="text" [(ngModel)]="background">
+<div [ngStyle]="{
+    'color':color,
+    'background-color':background
+}"><h1>Sample Text</h1></div>
+<div [ngStyle]="{'color':status=='available'?'blue':'red'}">Available</div>
+
