@@ -34,6 +34,7 @@ export class AboutUsComponent {
     number='0';
     showme=true;
     value=false;
+    express=false;
 
 
     enableRed=false;

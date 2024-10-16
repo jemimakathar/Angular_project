@@ -1,0 +1,72 @@
+                                         <!--pipes-->
+              <!-- Pipes are used in templates to format and transform data. -->
+
+
+<!-- Angular provides built-in pipes (like date, currency, uppercase, etc.).
+ You can also create custom pipes for more specific data transformations. -->
+
+<h1>Date</h1>
+
+<!-- Date -->
+ <p>unformated Date:{{toDate}}</p>
+ <p>formated Date:{{toDate|date}}</p>
+ <p>medium Date:{{toDate|date:'Medium'}}</p>
+ <p>Short Date:{{toDate|date:'short'}}</p>
+ <p>Long Date:{{toDate|date:'longDate'}}</p>
+
+
+ <h1>Upper and Lower case</h1>
+ <!--upper and Lower Case-->
+ <p>original:  {{message}}</p>
+ <p>uppercase: {{message|uppercase}}</p>
+ <p>Lowercase: {{message|lowercase}}</p>
+
+
+ <h1>Slice</h1>
+ <!--slice-->
+<p>Original:{{message}}</p>
+<p> Example1:{{message|slice:11:17}}</p>
+<p> Example1:{{message|slice:0:6}}</p>
+<p> Example1:{{message|slice:-7}}</p>
+
+
+<h1>Currency</h1>
+<!--currency  -->
+<p>price:{{price}}</p>
+<p>Dollor:{{price|currency}}</p>
+<p>Indian Currency:{{price|currency:'INR'}}</p>
+<p>Indian Currency:{{price|currency:'INR':false}}</p>
+
+
+<h1>Number</h1>
+<!-- Number -->
+ <p>Number:{{num|number}}</p>
+ <p>Before Decimal and after Decimal:{{num|number:'6.2-4'}} </p>
+ <p>Rounf-Off:{{num|number:'6.2-4'}}</p>
+ <p>For negative Values:{{n|number:'0.0-0'}}</p>
+
+
+
+ <h1>Percentage</h1>
+ <!-- Percentage -->
+ <p>percent:{{per|percent}}</p>
+ <p>Before Decimal and after Decimal:{{per|percent:'2.1-2'}} </p>
+ <p>Rounf-Off:{{per|percent:'6.2-4'}}</p>
+ <p>For negative Values:{{per|percent:'0.0-0'}}</p>
+
+<!-- Title case -->
+ <p>Original:{{title|titlecase}}</p>
+
+
+ <!-- object pipe-->
+ <p>{{obj}}{{arr}}</p>
+ <p>{{obj|json}}{{arr}}</p>
+
+
+<!-- keyvalue pair -->
+ <p>keyvalue pair:{{obj|keyvalue|json}}</p>     <!--keyvalue: ascending order wise keys sa assign pannum-->
+
+
+ <h1>custom pipe</h1>
+ <!-- custom pipe -->
+  <p>{{value|sortList}}</p>

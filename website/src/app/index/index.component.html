@@ -8,12 +8,15 @@
     <header>
         <nav>
             <ul>
-                <li><a routerLink="/about-us" style="color:bisque">About Us</a></li>
-                <li><a routerLink="/categories" style="color:bisque">Categories</a></li>
+                <li><a routerLink="/about-us" style="color:bisque">Directives and Template</a></li>
+                <li><a routerLink="/categories" style="color:bisque">Pipes</a></li>
                 <li><a routerLink="/contact" style="color:bisque">Contact</a></li>
+                <li><a routerLink="/post" style="color:bisque">post</a></li>
+
             </ul>
         </nav>
     </header>
+    
     <h1>{{FirstName}}{{LastName}}</h1>                           <!--String Interpolation-->
     <h1 [innerText]="FirstName"></h1>                            <!--property binding-->
     <!--Two way binding-->

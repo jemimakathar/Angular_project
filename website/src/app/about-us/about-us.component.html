@@ -1,3 +1,17 @@
+                           <!--template-->
+
+<!-- Template is a html file that defines the user interface of a component..It combines standard html with 
+ angular specific synatax to enable dynamic rendering of content,binding data and handling events
+
+Example:
+1.Display Data: Show values from component properties using interpolation (e.g., {{ value }}).
+2.Bind Events: Respond to user interactions (e.g., clicking a button) with event binding (e.g., (click)="method()").
+3.Use Structural Directives: Control the rendering of elements based on conditions (e.g., *ngIf, *ngFor).-->
+
+
+
+
+
 <!--ng For-->
 
 <ul>
@@ -84,6 +98,21 @@
  <ng-template #elseBlock>
     <p *ngIf="!value">show me is Not visible</p>
  </ng-template>
+
+
+ <!--using Button-->
+ <div class="rows">
+   <label for="">
+      <button type="button" (click)="express=!express">
+      {{express?'submit':'unsubmit'}}
+      </button>
+      <p *ngIf="!express">Form is not Submitted</p>
+      <p *ngIf="express">Form is  Submitted</p>
+   </label>
+ </div>
+
+
+
 
 
  <!--Attribute Directive-->
