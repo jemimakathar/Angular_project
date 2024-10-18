@@ -1,0 +1,35 @@
+<h3>Reactive Form</h3>
+<div class="container">
+   
+ <form [formGroup]="contractform">
+    <p>
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" name="firstname">
+    </p>
+    <p>
+        <label for="lastname">Last name</label>
+        <input type="text" id="lastname" name="lastname">
+    </p>
+    <p>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+    </p>
+    <p>
+        <label for="gender">Gender</label>
+        <input type="radio" value="male" id="gender" name="gender">Male
+        <input type="radio" value="Female" id="gender"name="gender">Female
+    </p>
+    <p>
+        <label for="Country">country</label>
+        <select name="Country" id="Country">
+            <option value="">Select</option>
+            <option value="1">India</option>
+            <option value="2">USA</option>
+            <option value="3">Europe</option>
+        </select>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+ </form>
+</div>

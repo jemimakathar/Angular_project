@@ -7,7 +7,10 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  email=new FormControl('abc@gamail.com',[Validators.minLength(2),Validators.maxLength(10),Validators.required]);
+  email=new FormControl('abc@gamail.com',[
+    Validators.minLength(2),
+    Validators.maxLength(10),
+    Validators.required]);
   showEmailDetails()
   {
  
