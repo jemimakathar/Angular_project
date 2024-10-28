@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { LifeCycleComponentTsComponent } from './life-cycle.component.ts/life-cycle.component.ts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    LifeCycleComponentTsComponent
   ],
   imports: [
     BrowserModule,

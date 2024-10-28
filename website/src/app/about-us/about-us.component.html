@@ -77,8 +77,9 @@ Example:
  <h1>ngIf Example</h1>
  <p *ngIf="false" >can you see mee???</p> 
  <div class="row">
-    <label for="">
-    <input type="checkbox" [(ngModel)]="showme"></label>
+    <label for="checkbox">
+    <input type="checkbox" [(ngModel)]="showme">
+   </label>
  </div>
  <p>{{showme}}</p>
  <p *ngIf="showme">show me is checked</p>
@@ -143,4 +144,5 @@ BackgroundColor:<input type="text" [(ngModel)]="background">
     'background-color':background
 }"><h1>Sample Text</h1></div>
 <div [ngStyle]="{'color':status=='available'?'blue':'red'}">Available</div>
+
 
