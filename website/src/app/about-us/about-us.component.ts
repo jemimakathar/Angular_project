@@ -51,6 +51,7 @@ export class AboutUsComponent {
     status ="availabl";
     color='pink';
     background='black';
+    
 
    
     

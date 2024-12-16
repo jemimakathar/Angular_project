@@ -1,3 +1,5 @@
+<!-- binding -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,12 +49,13 @@
     <button (click)="clickMe();clickcount1=clickcount">click mee..!</button><br><br>
 
 
-    <!--Event binding fot data-->
+    <!--Event binding for data-->
     <input type="text"(input)="handleInput($event)"> <!--event is an object uesd to identify which element goes to perform the event operation-->
     <p>{{value}}</p>
     <!--without handle input-->
     <input type="text"(input)="handleInput($event);value1=$any($event.target).value">
     <p>{{value1}}</p>
     <button (click)="alertNotification()">alert</button>
+
 
 </body>
